@@ -1,0 +1,94 @@
+.paper{
+  -moz-box-shadow: 1px 1px 6px gray;
+  -webkit-box-shadow: 1px 1px 6px gray;
+  box-shadow: 1px 1px 6px gray;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+.paper.clickBox:hover{
+  -moz-box-shadow: 2px 2px 16px gray;
+  -webkit-box-shadow: 2px 2px 16px gray;
+  box-shadow: 2px 2px 16px gray;
+}
+
+.logo{
+  background: linear-gradient(135deg,
+    #3F5587 0%,
+    #3F5587 60%,
+    #878787 60%,
+    #878787 68%,
+    #3F5587 68%,
+    #3F5587 100%);
+  padding-left: 2ch;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: #ddd;
+  font-style: italic;
+}
+
+.logo h3{
+  border-bottom: solid 3px #878787;
+  width: 98%;
+}
+
+.center{
+  text-align: center;
+}
+
+.slider{
+  border: solid 1px red;
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.contact{
+  background-color: #555;
+  color: #ddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.clickBox{
+  min-height: 200px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ddd;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.clickBox a{
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+}
+
+.clickBox a:hover{
+  color: #0FA0CE;
+}
+
+.clickBox a:after{
+  display: block;
+  content: '';
+  border-bottom: solid 2px #0FA0CE;
+  -webkit-transform: scaleX(0.000001);
+  -ms-transform: scaleX(0.000001);
+  transform: scaleX(0.000001);
+  -webkit-transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+}
+
+.clickBox a:hover:after{
+  transform: scaleX(1);
+}
+
+.highlights{
+  font-weight: bold;
+  margin-left: 30%;
+  list-style-type: none;
+}
+
+.highlights ul{
+  margin-top: 0;
+}
