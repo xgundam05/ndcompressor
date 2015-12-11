@@ -1,0 +1,26 @@
+.header > h4{
+  margin-bottom: 0;
+}
+
+.info > .row,
+.photobox,
+.contact,
+.message{
+  margin-top: 1rem;
+}
+
+.photobox{
+  height: 300px;
+  border-radius: 5px;
+}
+
+.info > .row > .column{
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.header{
+  margin-top: 1rem;
+  padding-left: 2ch;
+  background: linear-gradient(to right, white, gray);
+}
