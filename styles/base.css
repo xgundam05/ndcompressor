@@ -92,3 +92,10 @@
 .highlights ul{
   margin-top: 0;
 }
+
+.contact::after{
+  content: '© 2015-2016 ND Compressor Services';
+  font-size: x-small;
+  right: 0;
+  bottom: 0;
+}
