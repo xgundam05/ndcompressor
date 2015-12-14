@@ -11,6 +11,27 @@
   box-shadow: 2px 2px 16px gray;
 }
 
+/* Navigation Menu */
+/* Fix for Android */
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+@-webkit-keyframes bugfix{
+  from { padding: 0; }
+  to { padding: 0; }
+}
+
+input[type=checkbox]{
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+
+label{
+  cursor: pointer;
+  user-select: none;
+}
+
 nav ul{
   list-style-type: none;
   margin: 0;
@@ -28,17 +49,64 @@ nav li a{
   text-decoration: none;
   color: inherit;
   box-sizing: border-box;
-  font-size: small;
 }
-nav li a.active{
+nav li.active a{
   font-weight: bold;
   color: black;
+}
+
+@media (max-width: 549px){
+  body{
+    overflow-x: hidden;
+  }
+
+  nav{
+  }
+  nav ul{
+    display: block;
+    height: 0;
+    position: relative;
+    left: -20em;
+    width: 20em;
+    transition: all 0.2s;
+  }
+  nav li{
+    width: 100%;
+    display: block;
+  }
+  nav li.active{
+    display: none;
+  }
+  nav label{
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: #ddd;
+  }
+  nav label:after{
+    content: '\2261  ' attr(data-page);
+    position: relative;
+    font-size: medium;
+    margin-left: 0.75rem;
+  }
+  nav input:checked ~ ul{
+    left: 0;
+    height: auto;
+  }
+  nav input:checked ~ ul > li{
+    width: 100%;
+  }
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   nav li a{
     font-size: medium;
+  }
+  nav label{
+    position: absolute;
+    left: 0;
+    display: none;
   }
 }
 
