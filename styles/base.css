@@ -5,11 +5,6 @@
   -webkit-transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
 }
-.paper.clickBox:hover{
-  -moz-box-shadow: 2px 2px 16px gray;
-  -webkit-box-shadow: 2px 2px 16px gray;
-  box-shadow: 2px 2px 16px gray;
-}
 
 /* Navigation Menu */
 /* Fix for Android */
@@ -139,65 +134,27 @@ nav li.active a{
   text-align: center;
 }
 
-.slider{
-  height: 300px;
-  border-radius: 5px;
-  margin-top: 1rem;
-}
-
-.contact{
+.footer{
   background-color: #555;
   color: #ddd;
   padding: 5px;
   border-radius: 5px;
-}
-
-.clickBox{
-  min-height: 200px;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #ddd;
-  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.clickBox a{
-  text-decoration: none;
-  display: inline-block;
-  color: black;
-}
-
-.clickBox a:hover{
-  color: #0FA0CE;
-}
-
-.clickBox a:after{
-  display: block;
-  content: '';
-  border-bottom: solid 2px #0FA0CE;
-  -webkit-transform: scaleX(0.000001);
-  -ms-transform: scaleX(0.000001);
-  transform: scaleX(0.000001);
-  -webkit-transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out;
-}
-.clickBox a:hover:after{
-  transform: scaleX(1);
-}
-
-.highlights{
-  font-weight: bold;
-  margin-left: 30%;
-  list-style-type: none;
-}
-
-.highlights ul{
-  margin-top: 0;
-}
-
-.contact::after{
+.footer::after{
   content: '© 2015-2016 ND Compressor Services';
   font-size: x-small;
   right: 0;
   bottom: 0;
+}
+
+.header > h4{
+  margin-bottom: 0;
+}
+
+.header{
+  margin-top: 1.5rem;
+  padding-left: 2ch;
+  background: linear-gradient(to right, white, gray);
 }
